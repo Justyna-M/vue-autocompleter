@@ -1,0 +1,67 @@
+.home .section-1 .s-box .miasta{
+    width: 90%;
+    font-size: 16px;
+    list-style: none;
+    margin-left: 5%;
+    line-height: 35px;
+    font-size: 15px;
+    list-style: none;
+}
+.home .section-1 .s-box .miasta .numeracja1{
+    list-style: none;
+    text-align: left;
+}
+.home .section-1 .s-box .miasta .highlight {
+    font-weight: lighter;
+}
+.home .section-1 .s-box .miasta .podpowiedzi{
+    font-weight: bold;
+    cursor: pointer;
+}
+.home .section-1 .s-box .miasta .podpowiedzi:hover{
+    background-color:rgb(236, 238, 238);
+}
+.home .s-box{
+  width: 580px;
+  margin: 0px auto;
+  position: relative;
+  margin-top: -8px;
+  text-align: center;
+}
+.home .s-box .s-input{
+  display: block;
+  border: 1px solid #ddd;
+  color: rgba(0, 0, 0, 0.87);
+  font-size: 16px;
+  padding: 13px;
+  padding-left: 45px;
+  border-radius: 25px;
+  width: 100%;
+  transition: box-shadow 100ms;
+  outline: none;
+  
+}
+.home .s-box .s-input:hover{
+  border: 1px solid #fff;
+  box-shadow: 0 0 2px rgba(0,0,0, 0.05),
+              0 0 2px rgba(0,0,0, 0.05),
+              0 0 3px rgba(0,0,0, 0.05), 
+              0 0 4px rgba(0,0,0, 0.05), 
+              0 0 5px rgba(0,0,0, 0.05),
+              0 0 4px rgba(0,0,0, 0.05), 
+              0 0 5px rgba(0,0,0, 0.05)    
+}
+.home .s-box .search-icon{
+  width: 20px;
+  opacity: .6;
+  position: absolute;
+  top: 13px;
+  left: 14px;
+}
+.home .s-box .tia-icon{
+  width: 28px;
+  position: absolute;
+  top: 3px;
+  right: 20px;
+  cursor: pointer;  
+}  
