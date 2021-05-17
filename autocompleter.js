@@ -1,10 +1,10 @@
 Vue.component('v-autocompleter', {
-  template: '<div><img src="img/search.svg" class="search-icon"><input @change="signalChange" @keydown.enter="zmienStrone" v-model="googleSearch" type="text" class="s-input" ref="first"><img src="img/tia.jpg" class="tia-icon"><div class="miasta"><ul class="numeracja1"><li v-for="city in filteredCities" @click="handleClick(city.name)"><div class="podpowiedzi" v-html="highlight(city.name)"></div></li></ul></div></div>',
+  template: '<div><img src="img/search.svg" class="search-icon"><input @change="signalChange" @keydown.enter="zmienStrone" v-model="googleSearch" type="text" class="s-input" ref="first"><div class="miasta"><ul class="numeracja1"><li v-for="city in filteredCities" @click="handleClick(city.name)"><div class="podpowiedzi" v-html="highlight(city.name)"></div></li></ul></div></div>',
   propos: ['options'],
   data: function () {
     return {
       googleSearch: '',
-      isActive: 0,
+      //isActive: 0,
       cities: window.cities,
     }
   },
@@ -15,8 +15,8 @@ Vue.component('v-autocompleter', {
      */
     handleClick: function (name) {
       this.googleSearch = name;
-      this.isActive = 1;
-      this.$emit('enter', this.googleSearch)
+      //this.isActive = 1;
+      this.$emit('enter')
     },
     /**
      * Funkcja formatująca propozycje wyszukiwania według wzory: wszukiwana fraza jest zapisana stylem normalnym, reszta -pogrubionym.
@@ -30,7 +30,7 @@ Vue.component('v-autocompleter', {
      * Funkcja pozwalająca zmienić stronę po wciśnięciu enter na stronę z wynikami wyszukiwnaia.
      */
     zmienStrone: function () {
-      this.$emit('enter', this.googleSearch)
+      this.$emit('enter')
     },
     /**
      * Funkcja wystawiająca event przy zmianie inputa.
