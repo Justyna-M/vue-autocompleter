@@ -16,7 +16,7 @@
     <div id="app" :class="[isActive ==1 ? 'results' : 'home']">
         <section class="section-1">
             <form>
-                <center><u>Przykład użycia autocompletera</u></center><br><br>
+                <br><center><u>Przykład użycia autocompletera</u></center><br><br>
                 <div class="s-box">
                     <v-autocompleter :options="cities" @click="handleClick(city.name)" @enter="eventHandler()">
                     </v-autocompleter>
