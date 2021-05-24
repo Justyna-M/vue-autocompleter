@@ -13,6 +13,21 @@
 </head>
 
 <body>
+    <div>
+        <div class="tekst">
+            <h1>Vue Autocompleter Component</h1>
+            <br>
+            <p>Po wpisaniu frazy w poniższe pole, lista rozwijana pokaże miasta zwierające frazę wyszukiwania.<br>
+                <br>
+                Pogrubiona część nazwy miasta nie pasuje do frazy wyszukiwania, zaś ta odpowiadająca wpisanemu tekstowi
+                jest wyświetlana za pomocą stylu normalnego.<br>
+                <br>
+                Po najechaniu kursorem na jedną z podpowiedzi, jej tło zmieni się na kolor szary. Wybranie jednej z
+                podpowiedzi powoduje dołączenie klasy results widoczne poprzez zmianę tła. Podobny efekt można osiągnąć
+                naciskając przycisk enter.
+            </p>
+        </div>
+    </div>
     <div id="app" :class="[isActive ==1 ? 'results' : 'home']">
         <section class="section-1">
             <form>
@@ -26,6 +41,8 @@
     </div>
 
 
+
+
     <script>
         var app = new Vue({
             el: '#app',
@@ -33,14 +50,11 @@
                 isActive: 0,
                 googleSearch: '1',
                 cities: window.cities,
-
-
             },
             methods: {
                 eventHandler: function () {
                     event.preventDefault()
                     this.isActive = 1
-
                 },
             },
 
